@@ -48,7 +48,8 @@ public class LinkedList {
             System.out.print("List empty");
         } else {
             Node temp = list.head;
-            while (temp.next != null) {
+            // fixed the loop logic
+            while (temp != null) {
                 System.out.println(temp.data);
                 temp = temp.next;
             }

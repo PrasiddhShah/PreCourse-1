@@ -12,14 +12,8 @@ class Stack {
     int a[] = new int[MAX]; // Maximum size of Stack
 
     boolean isEmpty() {
-        boolean empty;
-        if (a.length == 0) {
-            System.out.println("Stack is Empty");
-            empty = true;
-        } else {
-            empty = false;
-        }
-        return empty;
+        // simplified the logic
+        return top == -1;
     }
 
     Stack() {
@@ -69,17 +63,20 @@ class Stack {
 class Exercise_1 {
     public static void main(String args[]) {
         Stack s = new Stack();
+        System.out.println(s.peek());
         s.push(10);
+        System.out.println(s.peek());
         s.push(20);
+        System.out.println(s.peek());
         s.push(30);
+        System.out.println(s.peek());
         s.push(40);
+        System.out.println(s.peek());
         s.push(50);
         System.out.println(s.pop() + " Popped from stack");
         System.out.println(s.peek());
         s.push(60);
         System.out.println(s.peek());
-        s.push(800);
-        s.push(800);
 
     }
 }

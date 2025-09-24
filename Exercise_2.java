@@ -24,9 +24,15 @@ public class StackAsLinkedList {
     }
 
     public void push(int data) {
+        // Null check added
         StackNode temp = new StackNode(data);
-        temp.next = root;
-        root = temp;
+        if (isEmpty()) {
+            root = temp;
+
+        } else {
+            temp.next = root;
+            root = temp;
+        }
         // Write code to push data to the stack.
     }
 
